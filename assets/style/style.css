@@ -61,3 +61,126 @@ body {
 main {
     padding-bottom: 5rem;
 }
+
+.content {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.header {
+    padding: 1.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transform: translateX(100%);
+    transition: transform 0.4s, background-color 2s;
+}
+
+[data-open="true"] {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hamburger {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.hamburger img {
+    pointer-events: none;
+}
+
+.navigation > ul {
+    width: 65%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navigation ul li:first-child {
+    margin-top: -25%;
+}
+
+.navigation ul li a {
+    padding: 0.75rem 0 0.75rem 1rem;
+    display: block;
+    font-size: 1.25rem;
+    color: var(--very-dark-blue);
+    transition: color 0.3s;
+}
+
+.navigation ul li a:hover {
+    color: var(--soft-red);
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+
+    p {
+        font-size: 1rem;
+    }
+
+    .header {
+        padding: 3rem 0;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        width: unset;
+        height: unset;
+        position: unset;
+        background-color: unset;
+        transform: unset;
+    }
+
+    .navigation ul {
+        width: unset;
+        position: unset;
+        flex-direction: row;
+    }
+
+    .navigation ul li:first-child {
+        margin-top: 0;
+    }
+
+    .navigation ul li:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .header {
+        padding-top: 4.5rem;
+    }
+}
