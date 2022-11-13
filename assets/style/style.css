@@ -1,0 +1,63 @@
+:root {
+    /*colors*/
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/static/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/static/Inter-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/static/Inter-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+p {
+    font-size: 0.938rem;
+    line-height: 1.5rem;
+    color: var(--dark-grayish-blue);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    padding-bottom: 5rem;
+}
